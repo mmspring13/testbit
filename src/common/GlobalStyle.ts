@@ -48,22 +48,22 @@ const GlobalStyle = createGlobalStyle<{ $theme: typeof theme }>`
   @font-face {
     font-family: "IBMPlexSans";
     font-weight: 700;
-    src: url("src/assets/fonts/IBMPlexSans-Bold.ttf");
+    src: url("/fonts/IBMPlexSans-Bold.ttf");
   }
   @font-face {
     font-family: "IBMPlexSans";
     font-weight: 600;
-    src: url("src/assets/fonts/IBMPlexSans-SemiBold.ttf");
+    src: url("/fonts/IBMPlexSans-SemiBold.ttf");
   }
   @font-face {
     font-family: "IBMPlexSans";
     font-weight: 500;
-    src: url("src/assets/fonts/IBMPlexSans-Medium.ttf");
+    src: url("/fonts/IBMPlexSans-Medium.ttf");
   }
   @font-face {
     font-family: "IBMPlexSans";
     font-weight: 400;
-    src: url("src/assets/fonts/IBMPlexSans-Regular.ttf");
+    src: url("/fonts/IBMPlexSans-Regular.ttf");
   }
 `;
 

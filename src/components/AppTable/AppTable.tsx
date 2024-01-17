@@ -48,9 +48,6 @@ const AppTable = <T extends BaseHeader>({ columns, data, className, onSort }: Ap
   return (
     <S.TableContainer onScroll={handleScroll} className={className}>
       <S.StyledTable>
-        {columns.map((col) => (
-          <col key={col.key} width={col.width || 'auto'} />
-        ))}
         <S.Thead>
           <tr className="thead-tr">
             {columns.map((col, idx) => {
