@@ -26,7 +26,7 @@ const Drawer = ({
 
   useEffect(() => {
     const handleEsc = (ev: KeyboardEvent) => {
-      if (ev.key === 'Escape') handleClose()
+      if (ev.key === 'Escape') setLocalOpen(false)
     };
     window.addEventListener('keyup', handleEsc);
     return () => {

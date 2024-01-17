@@ -62,9 +62,9 @@ export const Tbody = styled.tbody`
 
 export const StyledTh = styled.th<{ $width?: string; }>`
   background-color: ${(props) => props.theme.colors.base.black};
-  min-width: ${(props) => props.$width ? `calc(${props.$width} - 2.4rem)` : 'none'};
+  min-width: ${(props) => props.$width ? props.$width : 'none'};
   text-align: center;
-  padding: 0 1.2rem;
+
   &:first-child {
     border-top-left-radius: .8rem;
     border-bottom-left-radius: .8rem;
@@ -78,8 +78,7 @@ export const StyledTh = styled.th<{ $width?: string; }>`
 export const StyledTd = styled.td<{ $width?: string; }>`
   border-bottom: 1px solid ${(props) => props.theme.colors.grayScale.gray3};
   background-color: ${(props) => props.theme.colors.grayScale.gray4};
-  min-width: ${(props) => props.$width ? `calc(${props.$width} - 2.4rem)` : 'none'};
+  min-width: ${(props) => props.$width ? props.$width : 'none'};
   text-align: center;
-  padding: 0 1.2rem;
   cursor: pointer;
 `;

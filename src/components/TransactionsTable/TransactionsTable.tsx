@@ -51,7 +51,6 @@ const AmountCell = React.memo(({ trx }: { trx: TrxItem }) => {
 });
 
 const DateCell = React.memo(({ trx }: { trx: TrxItem }) => {
-  // const [date, time] = convertDateToHuman(trx.createdAt).split(',');
   const date = useMemo(() => {
     const convertedDate = convertDateToHuman(trx.createdAt);
     if (convertedDate) {

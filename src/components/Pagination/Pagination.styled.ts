@@ -16,6 +16,7 @@ export const PageButton = styled(PaginationButton)<{ $active: boolean; $disabled
   align-items: center;
   justify-content: center;
   border-radius: .8rem;
+  cursor: pointer;
   transition: .2s linear;
   color: ${(props) => props.theme.colors.base.white};
   ${(props) => props.$active && `

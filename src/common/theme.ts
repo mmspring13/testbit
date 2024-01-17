@@ -26,48 +26,6 @@ const darkColors = {
 
 const theme = {
   colors: darkColors,
-  // spacer: {
-  //   desktop: {
-  //     'lvl1': '1.6rem',
-  //     'lvl2': '2.0rem',
-  //     'lvl3': '3.4rem',
-  //     'lvl4': '4.2rem',
-  //     'lvl5': '5.2rem',
-  //     'lvl6': '6.4rem',
-  //     'lvl7': '7.2rem',
-  //     'lvl8': '8.6rem'
-  //   },
-  //   tablet: {
-  //     'lvl1': '1.4rem',
-  //     'lvl2': '1.8rem',
-  //     'lvl3': '3.0rem',
-  //     'lvl4': '3.8rem',
-  //     'lvl5': '4.6rem',
-  //     'lvl6': '5.6rem',
-  //     'lvl7': '6.6rem',
-  //     'lvl8': '7.4rem'
-  //   },
-  //   mobile: {
-  //     'lvl1': '1.0rem',
-  //     'lvl2': '1.4rem',
-  //     'lvl3': '2.4rem',
-  //     'lvl4': '3.0rem',
-  //     'lvl5': '3.8rem',
-  //     'lvl6': '4.4rem',
-  //     'lvl7': '5.6rem',
-  //     'lvl8': '6.4rem'
-  //   },
-  //   const: {
-  //     'lvl1': '.8rem',
-  //     'lvl2': '1.2rem',
-  //     'lvl3': '1.4rem',
-  //     'lvl4': '1.6rem',
-  //   },
-  // },
-  // breakpoints: {
-  //   table: '768px',
-  //   mobile: '640px'
-  // }
 };
 
 export const tableQuery = (css: string) => `
