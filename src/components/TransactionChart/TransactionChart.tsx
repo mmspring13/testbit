@@ -69,14 +69,19 @@ const TransactionChart = ({ transactions }: NewChartProps) => {
             }
             return null
           }} />
+          <defs>
+            <linearGradient id="transaction-chart-gradient" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="5%" stopColor={theme.colors.accent.primary} stopOpacity={0.8}/>
+              <stop offset="95%" stopColor={theme.colors.accent.primary} stopOpacity={.1}/>
+            </linearGradient>
+          </defs>
           <Area
             x={0}
             type="monotone"
             dataKey={(e) => e[1]}
             stroke={theme.colors.accent.primary}
             strokeWidth={2}
-            fill={theme.colors.accent.primary}
-            fillOpacity={.2}
+            fill="url(#transaction-chart-gradient)"
           />
           <XAxis
             dataKey={e => e[0]}
