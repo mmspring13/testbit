@@ -25,10 +25,6 @@ const TransactionChart = ({ transactions }: NewChartProps) => {
   const [startBrushIdx, setStartBrushIdx] = useState(0);
   const [endBrushIdx, setEndBrushIdx] = useState(0);
 
-  useEffect(() => {
-    setEndBrushIdx(Math.trunc((transactions.length - 1) / DECIMAL_INTERVAL));
-  }, [transactions.length]);
-
   const chartTransactions = useMemo(() => {
     const groupByTm = transactions.reduce((acc, trx) => {
       const dateKey = convertDateToHuman(trx.createdAt, 'YYYY-MM-DDTHH:mm:ss', null);
@@ -44,9 +40,13 @@ const TransactionChart = ({ transactions }: NewChartProps) => {
       return acc;
     }, new Map<string, number[]>());
     return Array.from(groupByTm)
-      .map((it): [string, number] => [it[0], sumOfNumbers(it[1]) / it[1].length])
+      .map((it): [string, number] => [it[0], sumOfNumbers(it[1])])
       .sort((a, b) => new Date(a[0]).getTime() - new Date(b[0]).getTime());
   }, [transactions]);
+
+  useEffect(() => {
+    setEndBrushIdx(Math.trunc((chartTransactions.length - 1) / DECIMAL_INTERVAL));
+  }, [chartTransactions.length]);
 
   const interval = useMemo(() => {
     return Math.trunc((endBrushIdx - startBrushIdx) / DECIMAL_INTERVAL);
@@ -135,7 +135,6 @@ const TransactionChart = ({ transactions }: NewChartProps) => {
               return (<rect
                 x={p.x}
                 y={p.y}
-                color={'red'}
                 width="6"
                 height="24"
                 fill={theme.colors.accent.primary}
